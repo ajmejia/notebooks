@@ -3,3 +3,7 @@
 *.png
 *.eps
 *.txt
+*.log
+*.gz
+*.pyc
+.ipynb*
