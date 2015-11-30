@@ -1,7 +1,8 @@
 from matplotlib import rc
 
+rc("figure", figsize=(6, 6))
 rc("font", family="sans-serif", serif="Helvetica", size=20, weight=600)
-rc("savefig", dpi=92, bbox="tight")
+rc("savefig", dpi=92, format="png")
 rc("legend", fontsize="x-small")
 rc("xtick", labelsize="xx-small")
 rc("ytick", labelsize="xx-small")
