@@ -1,18 +1,21 @@
 from matplotlib import rc
+from cycler import cycler
 
-font = {"family":"serif", "serif":"Times New Roman", "size":9.0}
-text = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage{helvet},\renewcommand{\familydefault}{\sfdefault},\boldmath"}
+clist  = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA4477 #774411 #777711 #AA4455".split()
+ccycle = cycler("color", clist)
+font   = {"family":"serif", "serif":"Times New Roman", "size":9.0}
+text   = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage{helvet},\renewcommand{\familydefault}{\sfdefault},\boldmath"}
 
 rc("figure", figsize=(3.3, 3.3))
-rc("axes", linewidth=0.5, labelsize=9.0, titlesize=9.0, color_cycle="AFD65C D69D5C 5C8ED6 D6CE5C D67C5C 5CD6B5 D65CC1".split())
+rc("text", **text)
+rc("font", **font)
+rc("axes", linewidth=0.5, labelsize=9.0, titlesize=9.0, prop_cycle=ccycle)
 rc("xtick.major", width=0.3)
 rc("xtick", labelsize="small")
 rc("ytick.major", width=0.3)
 rc("ytick", labelsize="small")
-rc("legend", numpoints=1, fontsize="xx-small", frameon=False)
 rc("lines", linewidth=1.0, markeredgewidth=0.0, markersize=7)
 rc("patch", linewidth=1.0)
-rc("font", **font)
-rc("text", **text)
+rc("legend", numpoints=1, fontsize="xx-small", frameon=False)
 rc("savefig", format="pdf", dpi=92, bbox="tight")
 
