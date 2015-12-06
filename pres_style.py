@@ -12,6 +12,6 @@ rc("xtick", labelsize="xx-small")
 rc("ytick", labelsize="xx-small")
 rc("lines", linewidth=2.0, markeredgewidth=0.0, markersize=7)
 rc("patch", linewidth=0.0)
-rc("legend", fontsize="x-small", numpoints=1, fontsize="medium", frameon=False)
+rc("legend", numpoints=1, fontsize="medium", frameon=False)
 rc("savefig", dpi=92, format="png")
 
