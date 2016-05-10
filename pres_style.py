@@ -5,8 +5,8 @@ clist  = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA447
 ccycle = cycler("color", clist)
 
 rc("figure", figsize=(6, 6))
-rc("text", usetex=False)
-rc("font", **{"family":"sans-serif", "sans-serif":"Bitstream Vera Sans", "size":16, "weight":700})
+rc("text", usetex=False, hinting="auto")
+rc("font", **{"family":"Roboto", "size":18, "weight":700})
 rc("axes", linewidth=1.0, labelsize="medium", titlesize="medium", labelweight=700, prop_cycle=ccycle)
 rc("xtick", labelsize="xx-small")
 rc("ytick", labelsize="xx-small")
