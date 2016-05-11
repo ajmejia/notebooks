@@ -4,16 +4,16 @@ from cycler import cycler
 clist  = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA4477 #774411 #777711 #AA4455".split()
 ccycle = cycler("color", clist)
 font   = {"family":"serif", "serif":"Times New Roman", "size":9.0}
-text   = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage{helvet},\renewcommand{\familydefault}{\sfdefault},\boldmath"}
+text   = {"usetex":True, "latex.preamble":r"\usepackage{helvet},\usepackage{amsmath},\usepackage{sfmath},\renewcommand{\familydefault}{\sfdefault},\boldmath"}
 
 rc("figure", figsize=(3.3, 3.3))
-rc("text", **text)
 rc("font", **font)
+rc("text", **text)
 rc("axes", linewidth=0.5, labelsize=9.0, titlesize=9.0, prop_cycle=ccycle)
 rc("xtick.major", width=0.3)
-rc("xtick", labelsize="small")
+rc("xtick", labelsize="x-small")
 rc("ytick.major", width=0.3)
-rc("ytick", labelsize="small")
+rc("ytick", labelsize="x-small")
 rc("lines", linewidth=1.0, markeredgewidth=0.0, markersize=7)
 rc("patch", linewidth=1.0)
 rc("legend", numpoints=1, fontsize="xx-small", frameon=False)
