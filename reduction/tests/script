@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while read name
+do
+  echo -n mejia@ovcida2:$name 
+done < new_sample.txt
+
