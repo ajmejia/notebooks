@@ -1,0 +1,3 @@
+[submodule "densitycontour"]
+	path = densitycontour
+	url = git@github.com:ajmejia/densitycontour.git

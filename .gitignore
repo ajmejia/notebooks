@@ -11,5 +11,3 @@ slides
 *.tgz
 *.pyc
 .ipynb*
-
-densitycontour.py
