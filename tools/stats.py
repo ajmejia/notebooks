@@ -34,6 +34,28 @@ def binner(x, y, bins=None, range=None, mu_stat="mean"):
 def last(nbin, span):
     return span[0], span[-1]+diff(span)/nbin
 
+def nbins(sample, range=None) :
+    IQR = lambda x: percentile(x, 0.75) - percentile(x, 0.25)
+    if range==None:
+        mn, mx = min(sample), max(sample)
+    else:
+        mn, mx = range
+
+    mask = (sample>=mn)&(sample<=mx)
+    binsize = (2 * IQR(sample_[mask])[0]/mask.sum() ** (1. / 3))
+
+    return (mx-mn)/binsize, mn, mx, binsize
+
+def err(xr, x, relative=True):
+    '''
+    Compute relative error between theoretical quantity x and real xr.
+    '''
+
+    if relative:
+        return (x - xr)/xr
+    if not relative:
+        return x - xr
+
 def redux_histogram2d(xbins, ybins, X, Y, Z, stat=average, fill=None):
     reduced_Z = zeros([xbins.size-1,ybins.size-1])
     for i, j in it.product(range(xbins.size-1), range(ybins.size-1)):
