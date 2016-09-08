@@ -1,7 +1,7 @@
 samples = dict(
-    mock="#333030",
-    m16="#004E66",
-    g05="#FCBE32"
+    dark="#333030",
+    cold="#004E66",
+    warm="#FCBE32"
 )
 seds = dict(
     jpas="#90C987",
