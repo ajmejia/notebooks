@@ -35,14 +35,14 @@ def last(nbin, span):
     return span[0], span[-1]+diff(span)/nbin
 
 def nbins(sample, range=None) :
-    IQR = lambda x: percentile(x, 0.75) - percentile(x, 0.25)
+    IQR = lambda x: percentile(x, 75.0) - percentile(x, 25.0)
     if range==None:
         mn, mx = min(sample), max(sample)
     else:
         mn, mx = range
 
     mask = (sample>=mn)&(sample<=mx)
-    binsize = (2 * IQR(sample_[mask])[0]/mask.sum() ** (1. / 3))
+    binsize = (2 * IQR(sample[mask])/mask.sum() ** (1. / 3))
 
     return (mx-mn)/binsize, mn, mx, binsize
 
