@@ -18,7 +18,7 @@ def binner(x, y, bins=None, range=None, mu_stat="mean"):
     if mu_stat=="mean":
         y_sta = array([mean(ys[i_bins==i]) for i in xrange(1, xedges.size)])
 
-        myer = array([std(ys[i_bins==i]) for i in xrange(1, xedges.size)])
+        myer = array([std(ys[i_bins==i], ddof=1) for i in xrange(1, xedges.size)])
         y_dev = array([myer, myer])
     elif mu_stat=="median":
         y_sta = array([percentile(ys[i_bins==i], 50) for i in xrange(1, xedges.size)])
