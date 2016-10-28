@@ -1,3 +1,5 @@
+from numpy import interp, trapz
+
 def AB2flux(ABmag, weff):
     return 10 ** (-0.4 * (ABmag - 22.5)) * 3.631e-6 * 1e-23 * (3e18 / weff ** 2)
 
