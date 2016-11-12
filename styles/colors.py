@@ -2,18 +2,13 @@ samples = dict(
     light="#D9D4CF",
     dark="#333030",
     cold="#004E66",
-    warm="#FCBE32"
+    warm="#FCBE32",
+    hot="#BD1550"
 )
 seds = dict(
-    jpas="#90C987",
-    sdss="#F6C141",
-    spec="#7BAFDE"
-)
-segr = dict(
-    jpas=[seds["jpas"], "#4EB265"],
-    sdss=[seds["sdss"], "#E8601C"],
-    spec=[seds["spec"], "#1965B0"]
-
+    spec="#BD1550",
+    jpas="#E97F02",
+    sdss="#F8CA00"
 )
 greys_map_name = "Greys"
 diver_map_name = "Spectral"
