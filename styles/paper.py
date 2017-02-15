@@ -2,8 +2,8 @@ from matplotlib import rc
 from cycler import cycler
 
 clist  = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA4477 #774411 #777711 #AA4455".split()
-font   = {"family":"serif", "serif":"Times New Roman", "size":9.0}
-text   = {"usetex":True, "latex.preamble":r"\usepackage{helvet},\usepackage{amsmath},\usepackage{sfmath},\renewcommand{\familydefault}{\sfdefault},\boldmath"}
+font   = {"family":"sans-serif", "sans-serif":"sans-serif", "size":9.0, "weight":700}
+text   = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage{sfmath},\renewcommand{\familydefault}{\sfdefault},\boldmath", "hinting":"native"}
 
 rc("figure", figsize=(3.3, 3.3))
 rc("font", **font)
