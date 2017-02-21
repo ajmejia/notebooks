@@ -4,7 +4,7 @@ from cycler import cycler
 clist = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA4477 #774411 #777711 #AA4455".split()
 ccycle = cycler("color", clist)
 
-font = {"family":"sans-serif", "size":18, "weight":900}
+font = {"family":"sans-serif", "sans-serif":"sans-serif", "size":14, "weight":900}
 text = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage{sfmath},\renewcommand{\familydefault}{\sfdefault},\boldmath", "hinting":"native"}
 
 rc("figure", figsize=(6, 6))
