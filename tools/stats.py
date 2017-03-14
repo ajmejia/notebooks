@@ -1,7 +1,7 @@
 from pylab import *
 import itertools as it
 
-def binner(x, y, bins=None, range=None, mu_stat="mean"):
+def binner(x, y, bins=None, range=None, stats=(mean,lambda x: std(x,ddof=1))):
     if bins==None: bins = 10
     if range==None:
         mn, mx = x.min(), x.max()
@@ -15,19 +15,18 @@ def binner(x, y, bins=None, range=None, mu_stat="mean"):
     i_bins = digitize(xs, xedges[:-1])
 
     x_cen = (xedges[:-1]+xedges[1:]) * 0.5
-    if mu_stat=="mean":
-        y_sta = array([mean(ys[i_bins==i]) for i in xrange(1, xedges.size)])
+    y_sta = array([stats[0](ys[i_bins==i]) for i in xrange(1, xedges.size)])
 
-        myer = array([std(ys[i_bins==i], ddof=1) for i in xrange(1, xedges.size)])
+    myer = array([stats[1](ys[i_bins==i]) for i in xrange(1, xedges.size)])
+    if len(myer.shape)==2:
+        if myer.shape[0]==2:
+            y_dev = myer
+        elif myer.shape[1]==2:
+            y_dev = myer.T
+        else:
+            raise ValueError, "y_dev has a shape {} incompatible with errorbar.".format(myer.shape)
+    elif len(myer.shape)==1:
         y_dev = array([myer, myer])
-    elif mu_stat=="median":
-        y_sta = array([percentile(ys[i_bins==i], 50) for i in xrange(1, xedges.size)])
-
-        myer = abs(array([percentile(ys[i_bins==i], 16) for i in xrange(1, xedges.size)]) - y_sta)
-        pyer = abs(array([percentile(ys[i_bins==i], 84) for i in xrange(1, xedges.size)]) - y_sta)
-        y_dev = array([myer, pyer])
-    else:
-        raise ValueError("Invalid value for 'mu_stat'.")
 
     return x_cen, y_sta, y_dev
 
