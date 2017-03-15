@@ -1,5 +1,5 @@
 params = dict(
-    M=r"\bf $M_\star$",
+    M=r"\bf $\log{M_\star/\text{M}_\odot}$",
     log_t_M=r"\bf $\left<\log{t_\star}/\text{yr}\right>_M$",
     log_t_L=r"\bf $\left<\log{t_\star}/\text{yr}\right>_L$",
     log_Z_M=r"\bf $\left<\log{Z_\star/\text{Z}_\odot}\right>_M$",
