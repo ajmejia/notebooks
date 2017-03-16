@@ -1,5 +1,6 @@
 samples = dict(
     light="#D9D4CF",
+    medium="#A3A1A1",
     dark="#333030",
     cold="#004E66",
     warm="#FCBE32",
