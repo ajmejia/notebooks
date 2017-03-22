@@ -14,6 +14,7 @@ Delta = dict(
     log_Z_L=r"\bf $\Delta\left<\log{Z_\star}\right>_L$",
     Av=r"\bf $\Delta A_V$"
 )
+Delta_int = dict((kw, Delta[kw].replace("Delta", r"Delta_\text{int}")) for kw in Delta)
 delta = dict(
     M=r"\bf $\delta\log{M_\star}$",
     log_t_M=r"\bf $\delta\left<\log{t_\star}\right>_M$",
