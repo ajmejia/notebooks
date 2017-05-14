@@ -3,15 +3,15 @@ from cycler import cycler
 
 clist  = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA4477 #774411 #777711 #AA4455".split()
 font   = {"family":"sans-serif", "size":9.0, "weight":700}
-text   = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage{sfmath},\renewcommand{\familydefault}{\sfdefault},\boldmath", "hinting":"native"}
+text   = {"usetex":True, "latex.preamble":r"\usepackage{amsmath},\usepackage[helvet]{sfmath},\usepackage{helvet},\renewcommand{\familydefault}{\sfdefault},\boldmath", "hinting":"native"}
 
 rc("figure", figsize=(3.3, 3.3))
 rc("font", **font)
 rc("text", **text)
-rc("axes", linewidth=0.5, labelsize=9.0, titlesize=9.0, prop_cycle=cycler("color", clist))
-rc("xtick.major", width=0.3, pad=2)
+rc("axes", linewidth=0.5, labelsize="medium", titlesize="medium", prop_cycle=cycler("color", clist))
+rc("xtick.major", size=3.0, width=0.3, pad=2)
 rc("xtick", labelsize="x-small")
-rc("ytick.major", width=0.3, pad=2)
+rc("ytick.major", size=3.0, width=0.3, pad=2)
 rc("ytick", labelsize="x-small")
 rc("lines", linewidth=1.0, markeredgewidth=0.0, markersize=7)
 rc("patch", linewidth=1.0)
