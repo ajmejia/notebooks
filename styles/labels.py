@@ -39,6 +39,6 @@ speco_lb = r"RA$^*$"
 
 sfgs_lb = r"GFEs"
 pags_lb = r"GPas"
-algs_lb = r"TGal"
+algs_lb = r"Todas"
 
 tsize = "x-small"

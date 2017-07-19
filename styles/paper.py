@@ -5,10 +5,11 @@ clist  = "#114477 #117755 #E8601C #771111 #771144 #4477AA #44AA88 #F1932D #AA447
 font   = {"family":"sans-serif", "size":11.0}
 text   = {"usetex":True, "latex.preamble":r"\usepackage[spanish]{babel},\usepackage{amsmath},\usepackage[helvet]{sfmath},\usepackage{helvet},\renewcommand{\familydefault}{\sfdefault}", "hinting":"native"}
 
-rc("figure", figsize=(3.3, 3.3))
+rc("figure", figsize=(3.3,3.3))
 rc("font", **font)
 rc("text", **text)
 rc("axes", linewidth=0.3, labelsize="small", titlesize="medium")
+rc("grid", linewidth=0.5)
 rc("xtick.major", size=3.0, width=0.3, pad=2)
 rc("xtick", labelsize="x-small")
 rc("ytick.major", size=3.0, width=0.3, pad=2)
